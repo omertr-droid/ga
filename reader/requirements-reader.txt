@@ -1,0 +1,4 @@
+# Reader web app — the ONLY new deps beyond the pipeline's requirements.txt.
+# Install: oct_env\Scripts\python.exe -m pip install -r reader\requirements-reader.txt
+fastapi>=0.110
+uvicorn[standard]>=0.29
