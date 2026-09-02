@@ -14,7 +14,7 @@ import os
 import numpy as np
 from oct_converter.readers import E2E
 
-import m2_bm
+from . import m2_bm
 import bm as bmseg
 
 from . import calibration as cal
