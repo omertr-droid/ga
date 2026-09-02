@@ -1,0 +1,4 @@
+-r reader/requirements-reader.txt
+fastapi
+uvicorn[standard]
+python-multipart
