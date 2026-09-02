@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GA Clinic</title>
+  <link rel="stylesheet" href="/css/app.css" />
+</head>
+<body>
+  <header id="menu">
+    <span class="brand">GA <b>Clinic</b></span>
+    <button class="menu-item active" data-screen="home">Database</button>
+    <button class="menu-item" data-screen="viewer" disabled>Viewer</button>
+    <button class="menu-item upload" id="menu-upload">Upload E2E</button>
+    <span id="identity" class="identity muted">no scan loaded</span>
+  </header>
+
+  <main id="screen-root"></main>
+
+  <div id="toast" class="toast" hidden></div>
+  <div id="loading" class="loading" hidden>
+    <div class="loading-card"><div class="spinner"></div><div id="loading-label">Working…</div></div>
+  </div>
+
+  <!-- shown while a file is dragged over the window; the drop itself is handled at window scope -->
+  <div id="drop-overlay" class="drop-overlay" hidden>
+    <div class="drop-card">
+      <div class="drop-title">Drop your .E2E to open</div>
+      <div class="drop-sub muted">Release to read the scan</div>
+    </div>
+  </div>
+  <div id="drop-live" class="sr-only" aria-live="polite"></div>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

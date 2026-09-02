@@ -1,0 +1,8 @@
+{
+  "input_mode": "2d",
+  "trained": "src/train_bm.py --input-mode 2d, 11 eyes / 8 patients, LOPO + refit-on-all (T4, 2026-06-20)",
+  "smoother": "within-B-scan column smoother sigma=1.5 applied in bm_dl (not in the ONNX graph)",
+  "selected_over": "2.5d",
+  "why": "GA-area endpoint dead-heat (mean |area - gold-BM area| 0.033 vs 0.037 mm2; corr w/ advRPE 0.95 both); 2D is simpler, drops the axially-misaligned neighbour-channel nuisance, marginally better on the gold-area metric + the large-GA 008 eyes. 017 LOPO 102um blowup is 0.05 mm2 at the endpoint (moot).",
+  "arch": "smp.Unet/resnet34, in_channels=3 (single slice replicated), pad_h=512, h_native=496"
+}
